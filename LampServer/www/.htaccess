@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "LampNet"
+AuthUserFile /export/lampnet/.htpasswd
+Require valid-user
+

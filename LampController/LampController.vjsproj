@@ -1,0 +1,65 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D1C5B01C-E6A2-473F-9CB8-1EF27CC2B2DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LampController</RootNamespace>
+    <AssemblyName>LampController</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.jsl" />
+    <Compile Include="src\BuildInfo.java" />
+    <Compile Include="src\CMR.java" />
+    <Compile Include="src\CMRAssembler.java" />
+    <Compile Include="src\Globals.java" />
+    <Compile Include="src\IOPanel.java" />
+    <Compile Include="src\LampController.java" />
+    <Compile Include="src\LineReader.java" />
+    <Compile Include="src\MyTime.java" />
+    <Compile Include="src\oMathFP.java" />
+    <Compile Include="src\PowerlightSPI.java" />
+    <Compile Include="src\SmartFlasher.java" />
+    <Compile Include="src\StopException.java" />
+    <Compile Include="src\Utils.java" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Nokia12Emulator\NokiaLibrary\NokiaLibrary.vjsproj">
+      <Project>{D48D84DA-1DD9-43C4-99A2-2F6BEBC51B9B}</Project>
+      <Name>NokiaLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualJSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
